@@ -4,7 +4,7 @@ import time
 from nredarwin.webservice import DarwinLdbSession
 import csv
 
-darwin_sesh = DarwinLdbSession(wsdl="https://lite.realtime.nationalrail.co.uk/OpenLDBWS/wsdl.aspx", api_key="f9548875-c386-45a6-96dc-de1c554da75c")
+darwin_sesh = DarwinLdbSession(wsdl="https://lite.realtime.nationalrail.co.uk/OpenLDBWS/wsdl.aspx", api_key="YOUR_API_KEY_HERE")
 
 
 stationDict = {}
