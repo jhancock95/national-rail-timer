@@ -112,5 +112,4 @@ def application():
     user = station(name, walk, destination)
     user.call()
 
-user = station('ENC', 10, None)
-user.call()
+application()
