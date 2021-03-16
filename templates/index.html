@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Can I Catch My Train?</title>
+{% endblock head %}
+
+{% block body%}
+<div class="content">
+    <h1>Can I Catch My Train?</h1>
+
+    <form action="/" method="POST">
+        <input type="text" name="userStation" id="userStation" placeholder="Your Starting Station">
+        <input type="number" name="userWalk" id="userWalk" placeholder="Your Travel Time (Mins)">
+        <input type="text" name="userDestination" id="userDestination" placeholder="Your Destination Station">
+        <input type="submit" value="Get Results">
+    </form>
+
+    <br>
+    <br>
+
+    <table id="table" class="center";>
+        <tr>
+            <th>Line Destination</th>
+            <th>Next Train</th>
+            <th>Time left</th>
+        </tr>
+        {% for entry in call %}
+        <tr>
+            <td>{{ entry['destination'] }}</td>
+            <td>{{ entry['trainTime'] }}</td>
+            <td>{{ entry['walkTime'] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+</div>
+{% endblock %}
