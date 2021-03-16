@@ -1,0 +1,3 @@
+[console_scripts]
+national-rail = nredarwin.cli:main
+
